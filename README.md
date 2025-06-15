@@ -32,4 +32,4 @@ This module is licensed under the MIT License.
 
 ## Support
 
-For support, please visit the [GitHub repository](https://github.com/ivandrenjanin/alignment-drift-tracker) or contact me on Discord: zaramao 
+For support, please visit the [GitHub repository issues](https://github.com/ivandrenjanin/alignment-drift-tracker/issues) or contact me on Discord: zaramao 

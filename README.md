@@ -4,7 +4,7 @@ A Foundry VTT module for tracking custom alignment paths (Corruption, Radiance, 
 
 ## Installation
 
-`module.json` ling can be found from the (Release page)[https://github.com/ivandrenjanin/alignment-drift-tracker/releases]
+`module.json` link can be found from the (Release page)[https://github.com/ivandrenjanin/alignment-drift-tracker/releases]
 
 
 ## Requirements

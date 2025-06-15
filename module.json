@@ -8,11 +8,25 @@
     "maximum": "12"
   },
   "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "compatibility": {
+          "minimum": "4.4.3",
+          "verified": "4.4.3",
+          "maximum": "4.4.x"
+        }
+      }
+    ],
     "requires": [
       {
         "id": "tidy5e-sheet",
         "type": "module",
-        "compatibility": {}
+        "compatibility": {
+          "minimum": "9.8.3",
+          "verified": "9.8.3",
+          "maximum": "9.8.x"
+        }
       }
     ]
   },

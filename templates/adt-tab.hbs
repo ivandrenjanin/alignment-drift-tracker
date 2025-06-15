@@ -1,11 +1,11 @@
 <div class="alignment-drift-tracker">
-    <h3>Dominant Trait: {{dominantTrait}}</h3>
-
-    <div>
-        Drift Points: {{drift.max}} / 13
+    <div class="alignment-drift-tracker-header">
+        <div><strong>Dominant Trait:</strong> {{dominantTrait}}</div>
+        <div><strong>Drift Points:</strong> {{drift.max}} / 13</div>
     </div>
     {{#each labels}}
-    <div class="alignment-drift-tracker-drift-track">
+    <div
+        class="alignment-drift-tracker-drift-track  alignment-drift-tracker-track-{{this.key}} alignment-drift-track-{{@index}}">
         <h2>{{this.name}}</h2>
         <div class="alignment-drift-tracker-drift-track-content">
             <div class="alignment-drift-tracker-drift-track-controls">
@@ -17,9 +17,9 @@
                 {{#each (range 0 13) as |i|}}
                 <span class="alignment-drift-tracker-drift-dot" data-index="{{i}}" data-track="{{@../index}}">
                     {{#if (lt i ../this.drift)}}
-                    🟡
+                    <i class="fas fa-circle alignment-drift-tracker-filled"></i>
                     {{else}}
-                    ⚫
+                    <i class="far fa-circle alignment-drift-tracker-empty"></i>
                     {{/if}}
                 </span>
                 {{/each}}

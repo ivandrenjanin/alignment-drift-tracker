@@ -2,36 +2,94 @@
     padding: 1em;
 }
 
+.alignment-drift-tracker h3,
+.alignment-drift-tracker h2 {
+    margin: 0 0 0.25em 0;
+    font-weight: bold;
+}
+
+.alignment-drift-tracker-drift-track {
+    background: rgba(255, 255, 255, 0.015);
+    border-radius: 6px;
+    padding: 1em;
+    margin-bottom: 1.25em;
+    border: 1px solid var(--color-border-light-tertiary);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.alignment-drift-tracker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
 .alignment-drift-tracker-drift-track-content {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.alignment-drift-tracker-drift-track {
-    margin-bottom: 15px;
-}
-
-.alignment-drift-tracker-drift-dot {
-    font-size: 1em;
-}
-
-.alignment-drift-tracker-counter {
-    cursor: pointer;
-}
-
-.alignment-drift-tracker-points {
-    width: 20px;
-    text-align: center;
+    gap: 1em;
 }
 
 .alignment-drift-tracker-drift-track-controls {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 0.5em;
+    font-size: 1.1em;
+    color: var(--color-text-dark-1);
+}
+
+.alignment-drift-tracker-points {
+    width: 1.75em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.alignment-drift-tracker-counter {
+    cursor: pointer;
+    color: var(--color-text-dark-1);
+    padding: 0.2em;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.alignment-drift-tracker-counter:hover {
+    color: var(--color-text-hyperlink);
+    transform: scale(1.1);
 }
 
 .alignment-drift-tracker-drift-dots {
     display: flex;
+    gap: 0.15em;
     flex-wrap: wrap;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.alignment-drift-tracker-empty {
+    color: #333;
+}
+
+.alignment-drift-tracker-track-evil .alignment-drift-tracker-filled {
+    color: #c0392b;
+}
+
+.alignment-drift-tracker-track-good .alignment-drift-tracker-filled {
+    color: #f1c40f;
+}
+
+.alignment-drift-tracker-track-neutral .alignment-drift-tracker-filled {
+    color: #3498db;
+}
+
+.alignment-drift-track-0 {
+    background: linear-gradient(to right, rgba(179, 58, 58, 0.1), rgba(179, 58, 58, 0.2));
+}
+
+.alignment-drift-track-1 {
+    background: linear-gradient(to right, rgba(252, 217, 59, 0.1), rgba(252, 217, 59, 0.2));
+}
+
+.alignment-drift-track-2 {
+    background: linear-gradient(to right, rgba(143, 188, 212, 0.1), rgba(143, 188, 212, 0.2));
 }

@@ -14,11 +14,12 @@ export function registerAlignmentDriftTab(api) {
                     drift = foundry.utils.duplicate(DEFAULT_DRIFT);
                 }
                 const labels = [
-                    { name: game.settings.get(MODULE_KEY, TRACKS.EVIL.LABEL), drift: drift.evil },
-                    { name: game.settings.get(MODULE_KEY, TRACKS.GOOD.LABEL), drift: drift.good },
-                    { name: game.settings.get(MODULE_KEY, TRACKS.NEUTRAL.LABEL), drift: drift.neutral }
+                    { name: game.settings.get(MODULE_KEY, TRACKS.EVIL.LABEL), key: TRACKS.EVIL.KEY, drift: drift.evil },
+                    { name: game.settings.get(MODULE_KEY, TRACKS.GOOD.LABEL), key: TRACKS.GOOD.KEY, drift: drift.good },
+                    { name: game.settings.get(MODULE_KEY, TRACKS.NEUTRAL.LABEL), key: TRACKS.NEUTRAL.KEY, drift: drift.neutral }
                 ];
                 drift.max = drift.good + drift.evil + drift.neutral;
+
                 return { sheet, labels, drift, dominantTrait: drift.dominantTrait };
             }
         })
@@ -36,12 +37,20 @@ export function handleTabClick(app, element, newTabId) {
             const trackKeys = [TRACKS.EVIL.KEY, TRACKS.GOOD.KEY, TRACKS.NEUTRAL.KEY];
             const track = trackKeys[trackIndex];
             const actor = app.actor;
-            console.log({ track })
 
             const current = await actor.getFlag(MODULE_KEY, FLAGS.DRIFT);
             const drift = foundry.utils.deepClone(current);
 
-            console.log({ drift, current });
+            const max = drift.good + drift.evil + drift.neutral;
+
+            if (max >= 13 && button.classList.contains("fa-plus")) {
+                ui.notifications.warn("Maximum drift points reached. Cannot increase further.");
+                return;
+            }
+            if (max <= 0 && button.classList.contains("fa-minus")) {
+                ui.notifications.warn("No drift points to decrease.");
+                return;
+            }
 
             if (button.classList.contains("fa-plus")) {
                 const result = drift[track] + 1;

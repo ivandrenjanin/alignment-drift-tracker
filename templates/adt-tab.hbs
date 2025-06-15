@@ -1,14 +1,24 @@
 <div class="alignment-drift-tracker">
     <div class="alignment-drift-tracker-header">
-        <div><strong>Dominant Trait:</strong> {{dominantTrait}}</div>
+        <div><strong>Dominant Trait:</strong>
+            <input type="text" class="alignment-drift-tracker-dominant-trait-input" value="{{dominantTrait}}" />
+        </div>
         <div><strong>Drift Points:</strong> {{drift.max}} / 13</div>
     </div>
     {{#each labels}}
     <div
         class="alignment-drift-tracker-drift-track  alignment-drift-tracker-track-{{this.key}} alignment-drift-track-{{@index}}">
-        <h2>{{this.name}}</h2>
+        <div class="alignment-drift-tracker-heading">
+            <h2>{{this.name}}</h2>
+        </div>
         <div class="alignment-drift-tracker-drift-track-content">
             <div class="alignment-drift-tracker-drift-track-controls">
+                <div class="alignment-drift-tracker-roll-fate-container">
+                    <button class="alignment-drift-tracker-roll-fate" data-track="{{@index}}" title="Roll 3df">
+                        <i class="fas fa-dice-d20"></i>
+                    </button>
+                </div>
+                <span class="alignment-drift-tracker-separator"></span>
                 <i class="fas fa-plus alignment-drift-tracker-counter" data-track="{{@index}}"></i>
                 <span class="alignment-drift-tracker-points">{{this.drift}}</span>
                 <i class="fas fa-minus alignment-drift-tracker-counter" data-track="{{@index}}"></i>
@@ -24,6 +34,7 @@
                 </span>
                 {{/each}}
             </div>
+
         </div>
 
     </div>

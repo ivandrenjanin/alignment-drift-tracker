@@ -1,0 +1,31 @@
+<div class="alignment-drift-tracker">
+    <h3>Dominant Trait: {{dominantTrait}}</h3>
+
+    <div>
+        Drift Points: {{drift.max}} / 13
+    </div>
+    {{#each labels}}
+    <div class="alignment-drift-tracker-drift-track">
+        <h2>{{this.name}}</h2>
+        <div class="alignment-drift-tracker-drift-track-content">
+            <div class="alignment-drift-tracker-drift-track-controls">
+                <i class="fas fa-plus alignment-drift-tracker-counter" data-track="{{@index}}"></i>
+                <span class="alignment-drift-tracker-points">{{this.drift}}</span>
+                <i class="fas fa-minus alignment-drift-tracker-counter" data-track="{{@index}}"></i>
+            </div>
+            <div class="alignment-drift-tracker-drift-dots">
+                {{#each (range 0 13) as |i|}}
+                <span class="alignment-drift-tracker-drift-dot" data-index="{{i}}" data-track="{{@../index}}">
+                    {{#if (lt i ../this.drift)}}
+                    🟡
+                    {{else}}
+                    ⚫
+                    {{/if}}
+                </span>
+                {{/each}}
+            </div>
+        </div>
+
+    </div>
+    {{/each}}
+</div>

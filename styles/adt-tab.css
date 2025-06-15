@@ -1,0 +1,37 @@
+.alignment-drift-tracker {
+    padding: 1em;
+}
+
+.alignment-drift-tracker-drift-track-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.alignment-drift-tracker-drift-track {
+    margin-bottom: 15px;
+}
+
+.alignment-drift-tracker-drift-dot {
+    font-size: 1em;
+}
+
+.alignment-drift-tracker-counter {
+    cursor: pointer;
+}
+
+.alignment-drift-tracker-points {
+    width: 20px;
+    text-align: center;
+}
+
+.alignment-drift-tracker-drift-track-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alignment-drift-tracker-drift-dots {
+    display: flex;
+    flex-wrap: wrap;
+}

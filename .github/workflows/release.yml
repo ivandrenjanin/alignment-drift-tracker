@@ -24,7 +24,7 @@ jobs:
           fields: '{"version": "${{env.VERSION}}", "manifest": "${{env.FOUNDRY_MANIFEST}}", "download": "${{env.FOUNDRY_DOWNLOAD}}"}'
 
       - name: Zip
-        run: zip -r ./module.zip * -x "assets/screenshots/*" -x "README.md"
+        run: zip -r ./module.zip * -x "./assets/screenshots/*" -x "./README.md"
 
       - name: Create Release
         uses: ncipollo/release-action@v1.13.0

@@ -2,8 +2,6 @@
 
 A Foundry VTT module for tracking custom alignment paths (Corruption, Radiance, and Balance) in Tidy UI.
 
-
-
 ## Installation
 
 1. In Foundry VTT, navigate to the Add-on Modules tab

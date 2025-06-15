@@ -6,7 +6,7 @@ A Foundry VTT module for tracking custom alignment paths (Corruption, Radiance, 
 
 1. In Foundry VTT, navigate to the Add-on Modules tab
 2. Click "Install Module"
-3. In the Manifest URL field, paste: `https://raw.githubusercontent.com/ivandrenjanin/adt/main/module.json`
+3. In the Manifest URL field, paste: `https://raw.githubusercontent.com/ivandrenjanin/alignment-drift-tracker/main/module.json`
 4. Click "Install"
 
 ## Requirements
@@ -32,4 +32,4 @@ This module is licensed under the MIT License.
 
 ## Support
 
-For support, please visit the [GitHub repository](https://github.com/ivandrenjanin/adt) or contact me on Discord: zaramao 
+For support, please visit the [GitHub repository](https://github.com/ivandrenjanin/alignment-drift-tracker) or contact me on Discord: zaramao 

@@ -50,7 +50,8 @@ This system is designed to help GMs and players track and visualize a character'
 ## TODO
 - [ ] Respect sheet permissions (if the sheet is not editable, the controls are disabled)
 - [ ] Better Dominant Trait Explanation/Lore instead of free text range as it is now.
-- [ ] Better system rules.
+- [ ] Better and expanded system rules with in-game consequences.
+- [ ] Fate Die Rolls sometimes duplicate.
 
 ## License
 

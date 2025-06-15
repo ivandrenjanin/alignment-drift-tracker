@@ -73,15 +73,15 @@
     color: #333;
 }
 
-.alignment-drift-tracker-track-evil .alignment-drift-tracker-filled {
+.alignment-drift-tracker-track-0 .alignment-drift-tracker-filled {
     color: #c0392b;
 }
 
-.alignment-drift-tracker-track-good .alignment-drift-tracker-filled {
+.alignment-drift-tracker-track-1 .alignment-drift-tracker-filled {
     color: #f1c40f;
 }
 
-.alignment-drift-tracker-track-neutral .alignment-drift-tracker-filled {
+.alignment-drift-tracker-track-2 .alignment-drift-tracker-filled {
     color: #3498db;
 }
 
